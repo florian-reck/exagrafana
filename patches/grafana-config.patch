@@ -1,0 +1,30 @@
+--- /etc/grafana/grafana.ini.empty	2018-12-07 12:05:21.412096943 +0000
++++ /etc/grafana/grafana.ini	2018-12-07 12:08:53.826532132 +0000
+@@ -29,13 +29,13 @@
+ #################################### Server ####################################
+ [server]
+ # Protocol (http, https, socket)
+-;protocol = http
++protocol = https
+ 
+ # The ip address to bind to, empty will bind to all interfaces
+ ;http_addr =
+ 
+ # The http port  to use
+-;http_port = 3000
++http_port = 3000
+ 
+ # The public facing domain name used to access grafana from a browser
+ ;domain = localhost
+@@ -58,8 +58,8 @@
+ ;enable_gzip = false
+ 
+ # https certs & key file
+-;cert_file =
+-;cert_key =
++cert_file = /etc/grafana/cert/server.pem
++cert_key = /etc/grafana/cert/server.priv
+ 
+ # Unix socket path
+ ;socket =
+
